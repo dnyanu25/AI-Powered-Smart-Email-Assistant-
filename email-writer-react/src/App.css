@@ -1,0 +1,14 @@
+/* Center all content horizontally */
+body {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+
+/* Optional: center vertically also */
+#root {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
