@@ -1,7 +1,7 @@
 console.log("Email Writer Extension Loaded");
 
-//
-//
+
+
 // 1. SELECTORS
 //
 
