@@ -12,7 +12,6 @@ function findComposeToolbar(){
         }
         return null;
     }
-
 }
 
 function createAIButton()
