@@ -10,7 +10,7 @@ function findComposeToolbar(){
         if(toolbar){
             return toolbar;
         }
-        return null;
+        return  null;
     }
 }
 
@@ -24,7 +24,6 @@ function createAIButton()
     button.setAttribute('data-tooltip','Generate Ai reply');
     return button;
 }
-
 function injectButton(){
    const existingButton =document.querySelector('.ai-reply-button');
    if(existingButton) existingButton.remove();
