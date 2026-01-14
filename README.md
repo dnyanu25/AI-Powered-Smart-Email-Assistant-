@@ -32,7 +32,7 @@ An AI-powered email assistant that generates **context-aware automated replies**
 
 ---
 
-## 🧠 System Architecture
+## 🧠 System Architecture 
 
 1. User opens an email in Gmail  .
 2. Chrome Extension injects an **“AI Reply”** button .
