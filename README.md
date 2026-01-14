@@ -34,12 +34,12 @@ An AI-powered email assistant that generates **context-aware automated replies**
 
 ## 🧠 System Architecture
 
-1. User opens an email in Gmail  
-2. Chrome Extension injects an **“AI Reply”** button  
-3. Email content is sent to the Spring Boot backend  
-4. Backend sends a structured prompt to the Google Gemini API  
-5. AI-generated reply is returned  
-6. Reply is displayed in Gmail for editing and sending  
+1. User opens an email in Gmail  .
+2. Chrome Extension injects an **“AI Reply”** button .
+3. Email content is sent to the Spring Boot backend . 
+4. Backend sends a structured prompt to the Google Gemini API .
+5. AI-generated reply is returned .
+6. Reply is displayed in Gmail for editing and sending . 
 
 ---
 
