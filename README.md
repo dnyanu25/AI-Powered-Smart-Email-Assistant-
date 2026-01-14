@@ -8,7 +8,7 @@ An AI-powered email assistant that generates **context-aware automated replies**
 
 - 🤖 AI-generated email replies using Google Gemini API  
 - ✉️ Context-aware responses based on email content  
-- ⚡ One-click “AI Reply” button integrated inside Gmail  
+- ⚡ One-click **“AI Reply”** button integrated inside Gmail  
 - 🌐 React web application for testing and previewing replies  
 - 🔐 Spring Boot REST API for secure request handling  
 - 🧩 Chrome Extension built with Manifest V3  
