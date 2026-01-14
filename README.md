@@ -1,6 +1,6 @@
 # 📧 AI-Powered Smart Email Assistant
 
-An AI-powered email assistant that generates **context-aware automated replies** directly inside Gmail using the **Google Gemini API**. The system includes a **React web application**, a **Chrome Extension**, and a **Spring Boot backend** for seamless AI-powered email reply generation.
+An AI-powered email assistant that generates **context-aware automated replies** directly inside Gmail using the **Google Gemini API**. The system includes a  **React web application**, a **Chrome Extension**, and a **Spring Boot backend** for seamless AI-powered email reply generation.
 
 ---
 
