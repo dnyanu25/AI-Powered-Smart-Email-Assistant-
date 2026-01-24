@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zigzag Flow Diagram</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+}
+
+#flowchart {
+    position: relative;
+    width: 1200px;
+    height: 320px;
+}
+
+/* BOXES */
+.node {
+    position: absolute;
+    width: 160px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    background-image: url("background-image.jpg"); /* 🔁 replace with your image */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+}
+
+/* ARROWS (RIGHT) */
+.arrow-right,
+.arrow-left {
+    position: absolute;
+    height: 2px;
+    background: #333;
+}
+
+.arrow-right::after {
+    content: '';
+    position: absolute;
+    right: -8px;
+    top: -4px;
+    border-left: 8px solid #333;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+/* ARROWS (LEFT) */
+.arrow-left::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: -4px;
+    border-right: 8px solid #333;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+/* ARROW DOWN */
+.arrow-down {
+    position: absolute;
+    width: 2px;
+    height: 60px;
+    background: #333;
+}
+
+.arrow-down::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: -4px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 8px solid #333;
+}
+</style>
+</head>
+
+<body>
+
+<div id="flowchart">
+
+    <!-- ROW 1 (Left → Right) -->
+    <div class="node" style="left:0px; top:0px;">1. User Inputs Email</div>
+    <div class="arrow-right" style="left:160px; top:28px; width:60px;"></div>
+
+    <div class="node" style="left:220px; top:0px;">2. Clicks Generate</div>
+    <div class="arrow-right" style="left:380px; top:28px; width:60px;"></div>
+
+    <div class="node" style="left:440px; top:0px;">3. Frontend POST</div>
+    <div class="arrow-right" style="left:600px; top:28px; width:60px;"></div>
+
+    <div class="node" style="left:660px; top:0px;">4. Backend Controller</div>
+    <div class="arrow-right" style="left:820px; top:28px; width:60px;"></div>
+
+    <div class="node" style="left:880px; top:0px;">5. Build Prompt</div>
+
+    <!-- VERTICAL CONNECTOR -->
+    <div class="arrow-down" style="left:960px; top:56px;"></div>
+
+    <!-- ROW 2 (Right → Left) -->
+    <div class="node" style="left:880px; top:140px;">6. Call Groq API</div>
+    <div class="arrow-left" style="left:820px; top:168px; width:60px;"></div>
+
+    <div class="node" style="left:660px; top:140px;">7. Parse Response</div>
+    <div class="arrow-left" style="left:600px; top:168px; width:60px;"></div>
+
+    <div class="node" style="left:440px; top:140px;">8. Return to Frontend</div>
+    <div class="arrow-left" style="left:380px; top:168px; width:60px;"></div>
+
+    <div class="node" style="left:220px; top:140px;">9. Display Reply</div>
+    <div class="arrow-left" style="left:160px; top:168px; width:60px;"></div>
+
+    <div class="node" style="left:0px; top:140px;">10. User Copies Text</div>
+
+</div>
+
+</body>
+</html>

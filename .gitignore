@@ -1,0 +1,19 @@
+# Create .gitignore at D:\spring
+@"
+# Application properties with secrets
+**/application.properties
+
+# IDE files
+.idea/
+*.iml
+.vscode/
+*.class
+
+# Build files
+target/
+build/
+node_modules/
+
+# OS files
+.DS_Store
+"@ | Out-File -FilePath .gitignore -Encoding UTF8

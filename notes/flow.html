@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mermaid Flowchart</title>
+</head>
+<body>
+
+<div class="mermaid">
+graph TD
+    A[User Opens React App] --> B[User Types Email Content]
+    B --> C[User Selects Tone Optional]
+    C --> D[User Clicks Generate Reply Button]
+    
+    D --> E{Is emailContent empty?}
+    E -->|Yes| F[Button Disabled]
+    E -->|No| G[Set Loading = true]
+    
+    G --> H[Frontend: axios.post to Backend]
+    H --> I[Request sent to http://localhost:8080/api/email/generate]
+    
+    I --> J[Backend: EmailGeneratorController receives request]
+    J --> K[Controller extracts EmailRequest object]
+    K --> L[Controller calls EmailGeneratorService.GenerateEmailReply]
+    
+    L --> M[Service: buildPrompt creates prompt text]
+    M --> N[Service: Prepare Groq API request body]
+    N --> O[Service: WebClient sends POST to Groq API]
+    
+    O --> P{Groq API Response}
+    P -->|Success| Q[Service: extractResponseContent parses JSON]
+    P -->|Error| R[Service: Return error message]
+    
+    Q --> S[Service returns AI-generated text to Controller]
+    R --> S
+    S --> T[Controller: ResponseEntity.ok returns to Frontend]
+    
+    T --> U[Frontend: axios receives response]
+    U --> V[Set generatedReply = response.data]
+    V --> W[Set Loading = false]
+    W --> X[Display Generated Reply in TextField]
+    
+    X --> Y[User can Copy to Clipboard]
+    
+    style A fill:#e1f5ff
+    style D fill:#fff9c4
+    style H fill:#ffccbc
+    style J fill:#c8e6c9
+    style O fill:#f8bbd0
+    style Q fill:#d1c4e9
+    style X fill:#b2dfdb
+</div>
+
+<script type="module">
+  import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+</body>
+</html>
