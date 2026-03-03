@@ -2,7 +2,7 @@ import { useState } from 'react';
 import emailService from '../services/emailService';
 
 /**
- * Custom hook for email generation logic
+ * Custom hook for email generation logic 
  */
 export const useEmailGenerator = () => {
   const [emailContent, setEmailContent] = useState('');
