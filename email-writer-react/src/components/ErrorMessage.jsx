@@ -6,7 +6,7 @@ const ErrorMessage = ({ message }) => {
       <Alert 
         severity="error" 
         sx={{ mb: 3 }}
-        variant="filled"
+        variant="filled" 
       >
         {message}
       </Alert>
