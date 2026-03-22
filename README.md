@@ -6,7 +6,7 @@ An AI-powered email assistant that generates **context-aware automated replies**
 
 ## 🚀 Features
 
-- 🤖 AI-generated email replies using Google Gemini API  
+- 🤖 AI-generated email replies using Google Gemini API  /Groq API
 - ✉️ Context-aware responses based on email content  
 - ⚡ One-click **“AI Reply”** button integrated inside Gmail  
 - 🌐 React web application for testing and previewing replies  
